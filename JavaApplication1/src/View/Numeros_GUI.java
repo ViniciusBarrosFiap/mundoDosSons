@@ -4,6 +4,8 @@
  */
 package View;
 
+import Model.Animais_DAO;
+
 /**
  *
  * @author labsfiap
@@ -37,16 +39,17 @@ public class Numeros_GUI extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        seis = new javax.swing.JButton();
+        um = new javax.swing.JButton();
+        dois = new javax.swing.JButton();
+        tres = new javax.swing.JButton();
+        quatro = new javax.swing.JButton();
+        cinco = new javax.swing.JButton();
+        dez = new javax.swing.JButton();
+        nove = new javax.swing.JButton();
+        oito = new javax.swing.JButton();
+        sete = new javax.swing.JButton();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -114,95 +117,105 @@ public class Numeros_GUI extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(430, 280, 90, 100);
 
-        jButton1.setText("Ouvir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        seis.setText("Ouvir");
+        seis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                seisActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(40, 380, 75, 23);
+        jPanel1.add(seis);
+        seis.setBounds(40, 380, 75, 23);
 
-        jButton2.setText("Ouvir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        um.setText("Ouvir");
+        um.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                umActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(40, 200, 72, 23);
+        jPanel1.add(um);
+        um.setBounds(40, 200, 72, 23);
 
-        jButton3.setText("Ouvir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        dois.setText("Ouvir");
+        dois.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                doisActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(170, 200, 75, 23);
+        jPanel1.add(dois);
+        dois.setBounds(170, 200, 75, 23);
 
-        jButton4.setText("Ouvir");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        tres.setText("Ouvir");
+        tres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                tresActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(310, 200, 75, 23);
+        jPanel1.add(tres);
+        tres.setBounds(310, 200, 75, 23);
 
-        jButton5.setText("Ouvir");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        quatro.setText("Ouvir");
+        quatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                quatroActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(450, 200, 75, 23);
+        jPanel1.add(quatro);
+        quatro.setBounds(450, 200, 75, 23);
 
-        jButton6.setText("Ouvir");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        cinco.setText("Ouvir");
+        cinco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                cincoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6);
-        jButton6.setBounds(600, 200, 75, 23);
+        jPanel1.add(cinco);
+        cinco.setBounds(600, 200, 75, 23);
 
-        jButton7.setText("Ouvir");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        dez.setText("Ouvir");
+        dez.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                dezActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7);
-        jButton7.setBounds(600, 380, 75, 23);
+        jPanel1.add(dez);
+        dez.setBounds(600, 380, 75, 23);
 
-        jButton8.setText("Ouvir");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        nove.setText("Ouvir");
+        nove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                noveActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8);
-        jButton8.setBounds(440, 380, 75, 23);
+        jPanel1.add(nove);
+        nove.setBounds(440, 380, 75, 23);
 
-        jButton9.setText("Ouvir");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        oito.setText("Ouvir");
+        oito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                oitoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9);
-        jButton9.setBounds(300, 380, 75, 23);
+        jPanel1.add(oito);
+        oito.setBounds(300, 380, 75, 23);
 
-        jButton10.setText("Ouvir");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        sete.setText("Ouvir");
+        sete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                seteActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton10);
-        jButton10.setBounds(160, 380, 75, 23);
+        jPanel1.add(sete);
+        sete.setBounds(160, 380, 75, 23);
+
+        back.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        back.setText("<<");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        jPanel1.add(back);
+        back.setBounds(40, 20, 60, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -218,46 +231,52 @@ public class Numeros_GUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(690, 480));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    private Animais_DAO animaisDAO = new Animais_DAO();
+    
+    private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
+        animaisDAO.playCurrentNumberSound(5);
+    }//GEN-LAST:event_seisActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void umActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umActionPerformed
+        animaisDAO.playCurrentNumberSound(0);
+    }//GEN-LAST:event_umActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void doisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doisActionPerformed
+        animaisDAO.playCurrentNumberSound(1);
+    }//GEN-LAST:event_doisActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
+        animaisDAO.playCurrentNumberSound(2);
+    }//GEN-LAST:event_tresActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void quatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quatroActionPerformed
+        animaisDAO.playCurrentNumberSound(3);
+    }//GEN-LAST:event_quatroActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
+        animaisDAO.playCurrentNumberSound(4);
+    }//GEN-LAST:event_cincoActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void dezActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dezActionPerformed
+        animaisDAO.playCurrentNumberSound(9);
+    }//GEN-LAST:event_dezActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void noveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noveActionPerformed
+        animaisDAO.playCurrentNumberSound(8);
+    }//GEN-LAST:event_noveActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void oitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oitoActionPerformed
+        animaisDAO.playCurrentNumberSound(7);
+    }//GEN-LAST:event_oitoActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void seteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seteActionPerformed
+        animaisDAO.playCurrentNumberSound(6);
+    }//GEN-LAST:event_seteActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        dispose();
+        new Menu_GUI().setVisible(true);
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,16 +314,10 @@ public class Numeros_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton back;
+    private javax.swing.JButton cinco;
+    private javax.swing.JButton dez;
+    private javax.swing.JButton dois;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -316,5 +329,12 @@ public class Numeros_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton nove;
+    private javax.swing.JButton oito;
+    private javax.swing.JButton quatro;
+    private javax.swing.JButton seis;
+    private javax.swing.JButton sete;
+    private javax.swing.JButton tres;
+    private javax.swing.JButton um;
     // End of variables declaration//GEN-END:variables
 }

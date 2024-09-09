@@ -32,6 +32,7 @@ public class Menu_GUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -49,13 +50,13 @@ public class Menu_GUI extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Números");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(430, 310, 130, 25);
+        jLabel2.setBounds(430, 310, 130, 22);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Animais");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(100, 310, 130, 25);
+        jLabel3.setBounds(100, 310, 130, 22);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/animalIcon.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -67,8 +68,22 @@ public class Menu_GUI extends javax.swing.JFrame {
         jButton1.setBounds(100, 170, 130, 140);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/icons-numeros.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
         jButton2.setBounds(430, 170, 130, 140);
+
+        exit.setText("Sair");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+        jPanel1.add(exit);
+        exit.setBounds(510, 430, 160, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +104,15 @@ public class Menu_GUI extends javax.swing.JFrame {
         dispose();
         new Animais_GUI().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        dispose();
+        new Numeros_GUI().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +150,7 @@ public class Menu_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exit;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

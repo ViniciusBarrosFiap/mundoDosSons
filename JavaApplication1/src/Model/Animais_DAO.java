@@ -39,6 +39,18 @@ public class Animais_DAO {
         "/Sons/wolf.mp3",
         
     };
+    private final String[] numbersSounds = {
+        "/Sons/um_audio.mp3",
+        "/Sons/dois_audio.mp3",
+        "/Sons/tres_audio.mp3",
+        "/Sons/quatro_audio.mp3",
+        "/Sons/cinco_audio.mp3",
+        "/Sons/seis_audio.mp3",
+        "/Sons/sete_audio.mp3",
+        "/Sons/oito_audio.mp3",
+        "/Sons/nove_audio.mp3",
+        "/Sons/dez_audio.mp3",
+    };
     private int animalIndexAtual = 0;
     
         public ImageIcon getCurrentImageIcon() {
@@ -69,6 +81,21 @@ public class Animais_DAO {
         String soundPath = getCurrentSoundPath();
         playSound(soundPath);
     }
+    
+    private int numbersIndexAtual = 0;
+   
+    
+    public String getCurrentNumberPath() {
+        return numbersSounds[numbersIndexAtual];
+    }
+    
+    
+    public void playCurrentNumberSound(int index) {
+        
+        playSound(numbersSounds[index]);
+    }
+    
+    
     
     public void playSound(String soundPath) {
         InputStream in = getClass().getResourceAsStream(soundPath);
